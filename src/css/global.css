@@ -1,0 +1,36 @@
+.bedroomButtons {
+    width: 100vw;
+    height: 114px;
+}
+
+.brightness {
+    height: 100%;
+}
+
+.brightness .MuiFab-extended-7 {
+    border-radius: 10px;
+}
+
+.b_switch .SwitchButtons-margin-1 {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.b_switch .on .SwitchButtons-margin-1{
+    background-color: green;
+}
+
+.b_switch .SwitchButtons-margin-1{
+    background-color: red;
+}
+
+.b_up .MuiFab-extended-7 {
+    width: 60%;
+    float: right;
+}
+
+.b_down .MuiFab-extended-7 {
+    width: 60%;
+    float: right;
+}
