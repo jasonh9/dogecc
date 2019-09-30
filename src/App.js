@@ -3,6 +3,7 @@ import './App.css'
 import LoadingScreen from './App/components/LoadingScreen/LoadingScreen'
 import BottomNavi from './App/components/BottomNavigation/BottomNavi'
 import Main from './App/containers/Main'
+import Header from './App/containers/Header/index'
 
 class App extends Component {
 
@@ -23,8 +24,11 @@ class App extends Component {
     return (
         <div className="App">
           <header className="App-header">
-            <Main selection={this.state.value} />
+            <Header />
           </header>
+          <div className="content">
+            <Main selection={this.state.value} />
+          </div>
           <footer>
             <BottomNavi
               changePage={this.onClickNewComponent.bind(this)}

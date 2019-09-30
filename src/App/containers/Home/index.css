@@ -1,0 +1,18 @@
+.main {
+    width: 100vw;
+}
+
+.switches {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+.switches li {
+    padding: 20px;
+}

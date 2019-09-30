@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+header img {
+    height: 40px;
+    float: left;
+}
+
+header p {
+    font-size: 17px;
+    margin-left:10px;
+    color: white;
+}

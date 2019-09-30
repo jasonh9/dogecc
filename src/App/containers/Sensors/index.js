@@ -1,11 +1,13 @@
 import React from 'react'
-import SocketToMe from '../../data/SocketIO'
+import SocketToMe from '../../services/SocketIO'
 
 class Muni extends React.Component {
     render(){
         console.log()
         return (
-            <SocketToMe />
+            <div>
+                this is sensors
+            </div>
         )
     }    
 }

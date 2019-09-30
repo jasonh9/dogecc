@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from '../Home'
-import Muni from '../Muni'
+import Sensors from '../Sensors'
 import Weather from '../Weather'
 
 // MQTT configurations
@@ -24,8 +24,8 @@ class Main extends React.Component {
     render(){
         if(this.state.selection === 'home'){
             return <Home />
-        } else if (this.state.selection === 'muni') {
-            return <Muni />
+        } else if (this.state.selection === 'sensors') {
+            return <Sensors />
         } else if (this.state.selection === 'weather') {
             return <Weather />
         } else {

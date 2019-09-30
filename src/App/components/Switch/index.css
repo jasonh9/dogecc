@@ -1,0 +1,56 @@
+.switch {
+    width: 150px;
+}
+
+.switch h4 {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
+.switch .status {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: inherit;
+    outline: none;
+}
+
+.switch .status p {
+    font-size: 20px;
+    color: white;
+}
+
+.switch .user-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.switch .user-controls button{
+    all: unset;
+    outline: none;
+}
+
+.switch .user-controls .up {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 45%;
+    height: 40px;
+    outline: none;
+}
+
+.switch .user-controls .down {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 45%;
+    height: 40px;
+    outline: none;
+}

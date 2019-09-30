@@ -2,9 +2,10 @@ import React from 'react'
 import {SwitchButton, BrightnessButton} from 'App/components/Button/SwitchButtons'
 // import BrightnessButtons from 'App/components/Button/SwitchButtons'
 
-import LedStatus from '../../data/LedStatus'
+import LedStatus from '../../services/LedStatus'
 import socketIOClient from "socket.io-client";
-
+import Switch from '../../components/Switch';
+import './index.css';
 
 class Home extends React.Component {
     constructor() {
@@ -48,8 +49,6 @@ class Home extends React.Component {
     getStatus(){
         const { endpoint } = this.state;
         const socket = socketIOClient(endpoint);
-        // socket.on("led/status/on", data => this.setState({ response: data }));
-        // socket.on("led/status/off", data => this.setState({ response: data }));
         socket.emit('led/status', "getStatus")
         socket.on("led/status", data => this.setState({ response: data }));
     }
@@ -57,8 +56,6 @@ class Home extends React.Component {
     componentDidMount() {
         const { endpoint } = this.state;
         const socket = socketIOClient(endpoint);
-        // socket.on("led/status/on", data => this.setState({ response: data }));
-        // socket.on("led/status/off", data => this.setState({ response: data }));
         socket.emit('led/status', "getStatus")
         socket.on("led/status", data => this.setState({ response: data }));
     }
@@ -82,33 +79,13 @@ class Home extends React.Component {
         }
 
         return (
-            <div className="bedroomButtons">
-                <LedStatus />
-                <div className="brightness">
-                    <span className="b_switch">
-                        {SwitchButtonPower}
-                    </span>
-                    <span className="b_up" 
-                        // onTouchStart={this.handleButtonPress} 
-                        // onTouchEnd={this.handleButtonRelease} 
-                        // onMouseDown={this.handleButtonPress} 
-                        // onMouseUp={this.handleButtonRelease} 
-                        // onMouseLeave={this.handleButtonRelease}
-                        onClick={this.handleOnButtonPress}
-                    >
-                        <BrightnessButton icon="up" type='Brightness Up' />
-                    </span>
-                    <span className="b_down" 
-                        // onTouchStart={this.handleOffButtonPress} 
-                        // onTouchEnd={this.handleOffButtonRelease} 
-                        // onMouseDown={this.handleOffButtonPress} 
-                        // onMouseUp={this.handleOffButtonRelease} 
-                        // onMouseLeave={this.handleOffButtonRelease}
-                        onClick={this.handleOffButtonPress}
-                    >
-                        <BrightnessButton icon="down" type='Brightness Down' />
-                    </span>
-                </div>
+            <div className="main">
+                <ul className="switches">
+                    <li><Switch name="Bedroom" /></li>
+                    <li><Switch /></li>
+                    <li><Switch /></li>
+                    <li><Switch /></li>
+                </ul>
             </div>
         )
     }

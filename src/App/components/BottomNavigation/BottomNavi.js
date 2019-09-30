@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import HomeIcon from '@material-ui/icons/OfflineBolt';
-import BusIcon from '@material-ui/icons/DirectionsBus';
+import Brightness5 from '@material-ui/icons/Brightness5';
+import Memory from '@material-ui/icons/Memory';
 import WeatherIcon from '@material-ui/icons/Cloud';
 // import { isAbsolute } from 'path';
 // import { blue } from '@material-ui/core/colors';
@@ -38,9 +38,9 @@ class SimpleBottomNavigation extends React.Component {
                 showLabels
                 className={classes.root}
             >
-                <BottomNavigationAction value='home' label="Home" icon={<HomeIcon />} />
-                <BottomNavigationAction value='muni' label="Muni" icon={<BusIcon />} />
-                <BottomNavigationAction value='weather' label="Weather" icon={<WeatherIcon />} />
+                <BottomNavigationAction value='home' label="Home" icon={<Brightness5 />} />
+                <BottomNavigationAction value='sensors' label="Sensors" icon={<Memory />} />
+                {/* <BottomNavigationAction value='weather' label="Weather" icon={<WeatherIcon />} /> */}
             </BottomNavigation>
         );
     }
